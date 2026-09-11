@@ -1,0 +1,20 @@
+/* =========================================================
+   Utilities / Helpers - Swatches, scrollbars, colores
+   ========================================================= */
+.color-swatch{width:28px;height:28px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:all .12s}
+.color-swatch:hover{transform:scale(1.1)}
+.color-swatch.active{border-color:var(--text)!important;transform:scale(1.08)}
+
+.editable-semestre{cursor:pointer;padding:2px 6px;border-radius:4px;border:1px dashed var(--border);transition:all .12s}
+.editable-semestre:hover{border-color:var(--primary);background:var(--primary-50)}
+
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--body-bg)}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#94a3b8}
+.table-responsive::-webkit-scrollbar{height:3px}
+
+.blue{background:var(--primary-50);color:var(--primary)}
+.green{background:var(--success-50);color:var(--success)}
+.amber{background:var(--warning-50);color:var(--warning)}
+.purple{background:var(--purple-50);color:var(--purple)}

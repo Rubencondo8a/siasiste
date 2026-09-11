@@ -1,0 +1,12 @@
+/* =========================================================
+   Components / Forms - Inputs, selects, input-groups
+   ========================================================= */
+.form-label{font-size:12.5px;font-weight:600;color:var(--text);margin-bottom:4px}
+.form-control,.form-select{font-size:13px;font-family:var(--font);border-radius:var(--radius-sm);border:1px solid #cbd5e1;color:var(--text);padding:8px 11px;transition:border-color var(--transition);background:#fff}
+.form-control:focus,.form-select:focus{border-color:var(--primary)}
+.form-control::placeholder{color:#94a3b8}
+.input-group-text{background:var(--body-bg);border:1px solid #cbd5e1;color:var(--text-secondary);font-size:13px;padding:8px 11px}
+
+.select2-container--bootstrap-5 .select2-selection{font-family:var(--font)!important;font-size:13px!important;min-height:36px;display:flex;align-items:center}
+.select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered{padding:4px 11px!important}
+.select2-container--bootstrap-5 .select2-dropdown{border-color:var(--border)!important;border-radius:var(--radius-sm)!important;font-family:var(--font)!important;font-size:13px!important}

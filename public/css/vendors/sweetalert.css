@@ -1,0 +1,17 @@
+/* =========================================================
+   Vendors / SweetAlert2 overrides
+   ========================================================= */
+.swal2-container{z-index:99999!important;position:fixed!important;pointer-events:auto;isolation:isolate}
+.swal2-popup{font-family:var(--font)!important;border-radius:var(--radius)!important;padding:24px!important;box-shadow:0 25px 60px rgba(0,0,0,.25)!important;border:1px solid var(--border)!important}
+.swal2-title{font-size:17px!important;color:var(--text)!important;font-weight:600!important}
+.swal2-html-container{font-size:13.5px!important;color:var(--text-secondary)!important;line-height:1.5!important}
+.swal2-actions .swal2-styled{font-family:var(--font)!important;font-weight:600!important;border-radius:var(--radius-sm)!important;font-size:13px!important;padding:8px 20px!important;margin:0 4px!important}
+.swal2-confirm.swal2-styled{background:var(--primary)!important}
+.swal2-cancel.swal2-styled{background:var(--text-secondary)!important}
+.swal2-deny.swal2-styled{background:var(--danger)!important}
+.swal2-timer-progress-bar{background:var(--primary)!important}
+.swal2-validation-message{font-size:12px!important;font-family:var(--font)!important}
+.swal2-toast .swal2-title{font-size:13px!important;font-weight:600!important}
+.swal2-toast .swal2-popup{padding:14px 18px!important;box-shadow:0 8px 24px rgba(0,0,0,.12)!important;border:none!important}
+.swal2-toast .swal2-html-container{font-size:12.5px!important}
+.swal2-container.swal2-backdrop-show,.swal2-container.swal2-no-transition{background:rgba(15,23,42,.45)!important}

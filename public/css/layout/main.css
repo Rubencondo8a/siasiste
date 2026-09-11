@@ -1,0 +1,5 @@
+/* =========================================================
+   Layout / Main - Contenedor principal
+   ========================================================= */
+#main{margin-left:var(--sidebar-w);padding-top:var(--topbar-h);min-height:100vh}
+.content-area{padding:24px}

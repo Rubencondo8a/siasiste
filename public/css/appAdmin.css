@@ -1,0 +1,38 @@
+/* =========================================================
+   SIASISTE - appAdmin.css (ENTRY)
+   Arquitectura modular ITCSS / 7-1 simplificada
+   Este archivo solo importa módulos. No agregar reglas aquí.
+   Para escalar: crear nuevo archivo en su capa y agregarlo al import.
+   Orden: base -> layout -> components -> utilities -> vendors
+   ========================================================= */
+
+/* Base */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+
+/* Layout */
+@import url('./layout/sidebar.css');
+@import url('./layout/topbar.css');
+@import url('./layout/main.css');
+
+/* Components */
+@import url('./components/cards.css');
+@import url('./components/tables.css');
+@import url('./components/forms.css');
+@import url('./components/buttons.css');
+@import url('./components/badges.css');
+@import url('./components/calendar.css');
+@import url('./components/modals.css');
+@import url('./components/timeline.css');
+
+/* Utilities */
+@import url('./utilities/helpers.css');
+@import url('./vendors/sweetalert.css');
+@import url('./utilities/responsive.css');
+@import url('./utilities/print.css');
+
+/*
+  NOTA:
+  - login moderno usa `public/css/login-siasiste.css` aislado (no se importa aquí)
+  - Para producción, ejecutar bundling/minify si se desea un solo archivo.
+*/

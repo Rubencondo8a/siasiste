@@ -1,0 +1,19 @@
+/* =========================================================
+   Components / Buttons
+   ========================================================= */
+.btn{font-family:var(--font);font-weight:600;border-radius:var(--radius-sm);padding:7px 14px;font-size:13px;transition:all var(--transition)}
+.btn-primary{background:var(--primary);border-color:var(--primary)}
+.btn-primary:hover{background:var(--primary-hover);border-color:var(--primary-hover)}
+.btn-success{background:var(--success);border-color:var(--success)}
+.btn-success:hover{background:#15803d;border-color:#15803d}
+.btn-danger{background:var(--danger);border-color:var(--danger)}
+.btn-danger:hover{background:#b91c1c;border-color:#b91c1c}
+.btn-outline-primary{border-color:var(--primary);color:var(--primary)}
+.btn-outline-primary:hover{background:var(--primary);border-color:var(--primary);color:#fff}
+
+.btn-accion-asist{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:var(--radius-sm);font-size:12px;font-weight:600;font-family:var(--font);border:1px solid var(--border);background:var(--card-bg);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);white-space:nowrap}
+.btn-accion-asist:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-50)}
+.btn-accion-asist i{font-size:13px}
+
+.btn-login{background:var(--primary);border:none;padding:11px;font-weight:600;font-size:14px;border-radius:var(--radius-sm);transition:background var(--transition);color:#fff;width:100%}
+.btn-login:hover{background:var(--primary-hover)}

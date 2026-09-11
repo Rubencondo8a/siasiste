@@ -1,0 +1,52 @@
+/* =========================================================
+   Base / Variables - Design Tokens SIASISTE
+   Centraliza colores, tipografía, radios y sombras.
+   Editar solo aquí para theming global.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Layout */
+  --sidebar-w: 248px;
+  --sidebar-bg: #0f172a;
+  --sidebar-hover: #1e293b;
+  --sidebar-active: #1d4ed8;
+  --topbar-h: 60px;
+
+  /* Surfaces */
+  --body-bg: #f8fafc;
+  --card-bg: #ffffff;
+
+  /* Text */
+  --text: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  /* Borders */
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* Brand */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-50: #eff6ff;
+  --success: #16a34a;
+  --success-50: #f0fdf4;
+  --warning: #d97706;
+  --warning-50: #fffbeb;
+  --danger: #dc2626;
+  --danger-50: #fef2f2;
+  --purple: #7c3aed;
+  --purple-50: #faf5ff;
+
+  /* Radius & Shadow */
+  --radius: 8px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.06);
+  --shadow-lg: 0 12px 24px rgba(0,0,0,.08);
+
+  /* Typography & Motion */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --transition: .15s ease;
+}

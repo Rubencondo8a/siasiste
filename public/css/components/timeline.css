@@ -1,0 +1,23 @@
+/* =========================================================
+   Components / Timeline + Login legacy
+   ========================================================= */
+.timeline{position:relative;padding-left:18px}
+.timeline::before{content:'';position:absolute;left:35px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative}
+.timeline-dot{position:relative;z-index:1}
+
+/* Login legacy (usado por fallback, el login nuevo usa login-siasiste.css) */
+.login-screen{position:fixed;inset:0;z-index:9999;background:#0f172a;display:flex;align-items:center;justify-content:center;font-family:var(--font)}
+.login-logo{width:60px;height:60px;border-radius:14px;background:var(--primary);display:inline-flex;align-items:center;justify-content:center;font-size:26px;color:#fff;margin-bottom:14px;overflow:hidden}
+.login-logo-img{height:36px;width:auto;object-fit:contain}
+.login-title{color:#fff;font-size:22px;font-weight:700;letter-spacing:-.3px}
+.login-subtitle{color:rgba(255,255,255,.55);font-size:13px;margin-top:3px;font-weight:400}
+.login-card{background:#fff;border-radius:var(--radius);padding:0;width:100%;max-width:380px;overflow:hidden}
+.login-card-body{padding:28px}
+.login-input{width:100%;padding:9px 11px 9px 36px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-family:var(--font);outline:none;transition:border-color var(--transition);background:#fff}
+.login-input:focus{border-color:var(--primary)}
+.login-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:15px;pointer-events:none}
+.login-error{display:none;background:var(--danger-50);color:var(--danger);border-radius:var(--radius-sm);padding:9px 12px;font-size:12.5px;font-weight:500;margin-bottom:14px;border:1px solid #fecaca}
+.pass-wrap{position:relative}
+.pass-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:15px;padding:0;transition:color var(--transition)}
+.pass-toggle:hover{color:var(--text)}

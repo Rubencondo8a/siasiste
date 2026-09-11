@@ -1,0 +1,23 @@
+/* =========================================================
+   Utilities / Responsive
+   ========================================================= */
+@media(max-width:991.98px){
+  #sidebar{transform:translateX(-100%)}
+  #sidebar.open{transform:translateX(0)}
+  #topbar{left:0}
+  #main{margin-left:0}
+  #sidebarToggle{display:block}
+  #sidebarOverlay.show{display:block}
+  .nav-link-item.active::before{display:none}
+}
+@media(max-width:768px){
+  .content-area{padding:16px}
+  .dash-value,.stat-value{font-size:22px}
+}
+@media(max-width:575.98px){
+  .top-user-info{display:none}
+  .top-chevron{display:none}
+  .page-heading span{font-size:13px}
+  .content-area{padding:12px}
+}
+@media(min-width:1400px){.container{max-width:1300px}}

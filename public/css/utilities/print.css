@@ -1,0 +1,9 @@
+/* =========================================================
+   Utilities / Print
+   ========================================================= */
+@media print{
+  #sidebar,#topbar,#sidebarOverlay,#sidebarToggle,.dt-buttons,
+  .dataTables_wrapper .dataTables_filter,.dataTables_wrapper .dataTables_length{display:none!important}
+  #main{margin-left:0!important;padding-top:0!important}
+  .dashboard-card,.stat-card,.chart-card,.table-card,.report-card,.config-card{box-shadow:none!important;border:1px solid #ddd!important}
+}

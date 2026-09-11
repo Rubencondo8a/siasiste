@@ -1,0 +1,237 @@
+<?php
+require_once __DIR__ . '/../../config/config.php';
+$error = flash('error');
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SIASISTE - Sistema Integral de Asistencia. Inicia sesión para administrar tu información de asistencia de manera segura.">
+  <meta name="color-scheme" content="light">
+  <title>SIASISTE - Iniciar Sesión</title>
+  <link rel="icon" href="<?php echo BASE_URL; ?>/public/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/login-siasiste.css">
+</head>
+<body class="siasiste-login">
+
+  <main class="login-wrapper" aria-labelledby="loginTitle">
+    <div class="login-container">
+
+      <!-- Panel Izquierdo: Marca / Bienvenida -->
+      <section class="login-brand" aria-label="Información institucional SIASISTE">
+        <div class="brand-decor" aria-hidden="true">
+          <div class="decor-circle decor-circle--1"></div>
+          <div class="decor-circle decor-circle--2"></div>
+          <div class="decor-circle decor-circle--3"></div>
+          <div class="decor-arc"></div>
+          <div class="decor-gradient"></div>
+        </div>
+
+        <div class="brand-content">
+          <div class="brand-top">
+            <div class="brand-logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L4 7.5V12C4 16.4183 7.13401 20.5 12 21.5C16.866 20.5 20 16.4183 20 12V7.5L12 3Z" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1.2"/>
+                <path d="M9.2 12.2L11.1 14.1L15.2 9.6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="brand-name">SIASISTE</span>
+            <span class="brand-badge">Institucional</span>
+          </div>
+
+          <div class="brand-hero">
+            <h1>BIENVENIDO</h1>
+            <h2>Sistema Integral de Asistencia</h2>
+            <p class="brand-description">
+              Administra y consulta tu información de asistencia de manera rápida, segura y sencilla. Una plataforma pensada para la gestión institucional moderna.
+            </p>
+            <ul class="brand-features" aria-label="Características">
+              <li>
+                <span class="feat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="1.5"><path d="M8 3.2L3.5 5.6V8.8C3.5 11.1 5.2 13.3 8 14.2C10.8 13.3 12.5 11.1 12.5 8.8V5.6L8 3.2Z"/><path d="M6 8.2L7.5 9.7L10.2 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                Seguridad y confianza institucional
+              </li>
+              <li>
+                <span class="feat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="1.5"><circle cx="8" cy="8" r="5.2"/><path d="M8 5.5V8L10 9.2"/></svg>
+                </span>
+                Control de asistencia en tiempo real
+              </li>
+              <li>
+                <span class="feat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="1.5"><path d="M2.5 8H13.5"/><path d="M8 2.5V13.5"/><circle cx="8" cy="8" r="5.2"/></svg>
+                </span>
+                Acceso simple desde cualquier dispositivo
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="brand-footer">
+          <span>© <?php echo date('Y'); ?> <strong>SIASISTE</strong> · Gestión Académica</span>
+          <span aria-hidden="true">● Seguro y confiable</span>
+        </div>
+      </section>
+
+      <!-- Panel Derecho: Formulario -->
+      <section class="login-form-panel" aria-label="Formulario de inicio de sesión">
+        <!-- Marca compacta solo mobile -->
+        <div class="mobile-brand" aria-hidden="true">
+          <div class="mobile-brand-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3L4 7.5V12C4 16.4 7.1 20.5 12 21.5C16.9 20.5 20 16.4 20 12V7.5L12 3Z" fill="white"/><path d="M9.2 12.2L11.1 14.1L15.2 9.6" stroke="#1d4ed8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="mobile-brand-text">SIASISTE</div>
+            <div class="mobile-brand-sub">Sistema Integral de Asistencia</div>
+          </div>
+        </div>
+
+        <header class="login-form-header">
+          <h2 id="loginTitle">Iniciar sesión</h2>
+          <p>Ingresa tus credenciales para acceder a SIASISTE</p>
+        </header>
+
+        <!-- Mensaje dinámico JS -->
+        <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+
+        <!-- Error PHP flash (compatibilidad) -->
+        <?php if ($error): ?>
+        <div class="form-message show error php-flash" role="alert">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5.5V8.5"/><circle cx="8" cy="11.2" r="0.9" fill="currentColor" stroke="none"/></svg>
+          <span><?php echo sanitize($error); ?></span>
+        </div>
+        <?php endif; ?>
+
+        <!-- Contenedor legacy para errores fetch -->
+        <div id="loginError" aria-live="polite"></div>
+
+        <form id="loginForm" class="login-form" method="POST" action="index.php?route=login" novalidate autocomplete="on">
+
+          <div class="form-group" id="group-usuario">
+            <label for="loginUser">Usuario o correo electrónico</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="9" cy="5.5" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M3.2 14.2C3.2 11.4 5.6 9.2 9 9.2C12.4 9.2 14.8 11.4 14.8 14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="loginUser"
+                name="usuario"
+                class="form-control"
+                placeholder="usuario@ejemplo.com"
+                autocomplete="username"
+                required
+                aria-required="true"
+                aria-describedby="error-usuario"
+                spellcheck="false"
+                autofocus
+              >
+            </div>
+            <span id="error-usuario" class="field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group" id="group-contrasena">
+            <label for="loginPass">Contraseña</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3.2" y="7.2" width="11.6" height="7.6" rx="1.6" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M6.2 7.2V5.2C6.2 3.6 7.4 2.4 9 2.4C10.6 2.4 11.8 3.6 11.8 5.2V7.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="9" cy="11" r="1.1" fill="currentColor"/>
+                </svg>
+              </span>
+              <input
+                type="password"
+                id="loginPass"
+                name="contrasena"
+                class="form-control"
+                placeholder="Ingresa tu contraseña"
+                autocomplete="current-password"
+                required
+                aria-required="true"
+                aria-describedby="error-contrasena"
+              >
+              <button
+                type="button"
+                id="passwordToggle"
+                class="password-toggle"
+                aria-label="Mostrar contraseña"
+                aria-pressed="false"
+                aria-controls="loginPass"
+                tabindex="0"
+              >
+                <!-- ojo abierto -->
+                <svg class="icon-eye-open" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                  <path d="M1.5 9C1.5 9 4.2 4.2 9 4.2C13.8 4.2 16.5 9 16.5 9C16.5 9 13.8 13.8 9 13.8C4.2 13.8 1.5 9 1.5 9Z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="9" cy="9" r="2.3" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <!-- ojo cerrado -->
+                <svg class="icon-eye-close" viewBox="0 0 18 18" fill="none" aria-hidden="true" style="display:none">
+                  <path d="M2.2 2.2L15.8 15.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M9 4.2C7.1 4.2 5.4 5 4 6.3L5.1 7.4M12.9 10.6L11.8 11.7M9 13.8C13.8 13.8 16.5 9 16.5 9C16.5 9 15.6 7.5 14 6.2L12.6 7.6C13.4 8.1 13.9 8.6 14.1 9C14.1 9 12.6 11.4 9.6 12.6L8.2 14C8.5 14 8.7 14 9 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.6 6.6C7.1 6.2 7.8 5.9 8.6 5.9C10 5.9 11.1 7 11.1 8.4C11.1 9.2 10.8 9.9 10.2 10.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+            <span id="error-contrasena" class="field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="remember-row">
+            <label class="checkbox-label" for="rememberMe">
+              <input type="checkbox" id="rememberMe" name="recordarme">
+              Recordarme
+            </label>
+            <a href="#" id="forgotLink" class="forgot-link">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" id="loginButton" class="login-button">
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="btn-text">Iniciar sesión</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="btn-arrow">
+              <path d="M3.5 8H12.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M8.5 4.5L12.5 8L8.5 11.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="separator" aria-hidden="true"><span>o</span></div>
+
+          <button type="button" id="secondaryButton" class="secondary-button">
+            <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <rect x="2.2" y="2.2" width="13.6" height="13.6" rx="3" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M6 9H12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M9 6V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Continuar con otro método
+          </button>
+
+          <p class="form-footer">
+            ¿No tienes una cuenta? <a href="#" id="registerLink">Registrarse</a>
+          </p>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="<?php echo BASE_URL; ?>/public/js/login-siasiste.js"></script>
+  <script>
+    // Registro link preparado para futuro
+    document.getElementById('registerLink')?.addEventListener('click', function(e){
+      e.preventDefault();
+      var msg = document.getElementById('formMessage');
+      if (msg) {
+        msg.className = 'form-message show error';
+        msg.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5.5V8.5"/><circle cx="8" cy="11.2" r="0.9" fill="currentColor" stroke="none"/></svg><span>El registro es gestionado por el administrador. Contacta a soporte.</span>';
+      }
+    });
+  </script>
+</body>
+</html>

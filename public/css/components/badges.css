@@ -1,0 +1,9 @@
+/* =========================================================
+   Components / Badges - Estados
+   ========================================================= */
+.badge-status{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:99px;display:inline-flex;align-items:center;gap:4px}
+.badge-active{background:var(--success-50);color:var(--success)}
+.badge-inactive{background:var(--danger-50);color:var(--danger)}
+.badge-pending{background:var(--warning-50);color:var(--warning)}
+.badge-justificado{background:var(--purple-50);color:var(--purple)}
+.badge-admin{background:var(--primary-50);color:var(--primary);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:99px;display:inline-flex;align-items:center}
