@@ -1,0 +1,94 @@
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    section.content { padding: 14px 12px 24px; }
+    .content-header { padding: 14px 12px 2px; }
+    .content-header h1 { font-size: 1.15rem; }
+    .small-box { min-height: 130px; }
+    .small-box h3 { font-size: 1.6rem; }
+    .card-body { padding: 16px; }
+    .table thead th { font-size: .68rem; padding: 9px 6px; }
+    .table td { padding: 9px 6px; font-size: .83rem; }
+    .btn { padding: 7px 14px; font-size: .83rem; }
+    .info-box { min-height: 70px; }
+    .info-box-number { font-size: 1.2rem; }
+}
+
+@media (max-width: 576px) {
+    .small-box > .inner { padding: 18px; }
+    .small-box h3 { font-size: 1.4rem; }
+    .small-box p { font-size: .74rem; }
+}
+
+/* ============================================================
+   COMPACTACIÓN GLOBAL — densidad homogénea para todo el sistema
+   Se aplica a los componentes AdminLTE compartidos (content-header,
+   cards, tablas, botones, formularios, navbar) sin tocar la lógica.
+   ============================================================ */
+.content-header { padding: 14px 20px 2px; margin-bottom: 6px; }
+.content-header h1 { font-size: 1.3rem; }
+section.content { padding: 14px 20px 26px; }
+
+.card-header { padding: 12px 18px; }
+.card-body { padding: 16px 18px; }
+.card-footer { padding: 10px 18px; }
+
+.table thead th { padding: 9px 10px; }
+.table td { padding: 10px; font-size: .88rem; }
+
+.btn { padding: 8px 18px; }
+.btn-sm { padding: 5px 12px; }
+.btn-xs { padding: 2px 7px; }
+
+.form-control { padding: 8px 12px; font-size: .88rem; }
+.form-group { margin-bottom: 14px; }
+
+.main-footer { padding: 10px 20px; }
+
+.badge { padding: 4px 10px; font-size: .73rem; }
+
+.small-box { min-height: 120px; }
+.small-box > .inner { padding: 16px 18px 6px; }
+.small-box h3 { font-size: 1.9rem; }
+.small-box p { font-size: .8rem; }
+
+.stat-card { padding: 14px 18px 12px; min-height: 120px; }
+.stat-card-value { font-size: 1.8rem; margin-top: 8px; }
+.stat-card-icon { width: 38px; height: 38px; }
+
+.info-box { min-height: 76px; }
+.info-box-content { padding: 10px 14px; }
+.info-box-number { font-size: 1.3rem; }
+
+@media (max-width: 768px) {
+    .content-header { padding: 12px 12px 2px; }
+    section.content { padding: 10px 12px 20px; }
+    .card-body { padding: 14px 14px; }
+}
+
+/* ============================================================
+   IMPRESIÓN
+   ============================================================ */
+@media print {
+    .main-sidebar, .main-header, .main-footer, .btn, .card-footer,
+    .dataTables_filter, .dataTables_length, .dataTables_paginate {
+        display: none !important;
+    }
+    .content-wrapper { margin-left: 0 !important; padding: 0 !important; }
+    .card { box-shadow: none; border: 1px solid var(--gray-300); border-radius: 4px; }
+    .card:hover, .small-box:hover { box-shadow: none; transform: none; }
+    body { background: #fff; font-size: 11pt; }
+    .table td, .table th { padding: 6px 8px; }
+}
+
+/* ============================================================
+   CONTENT HEADER RESPONSIVE
+   Aplica a todas las páginas con .content-header
+   ============================================================ */
+@media(max-width:576px){
+.content-header .d-flex{flex-direction:column;align-items:stretch!important}
+.content-header h1{font-size:1.1rem;margin-bottom:8px}
+.content-header .btn-group{display:flex;flex-wrap:wrap;gap:4px}
+.content-header .btn-group .btn{flex:1 1 auto;min-width:0;white-space:nowrap;font-size:.82rem;padding:5px 8px}
+}

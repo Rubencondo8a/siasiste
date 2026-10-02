@@ -1,0 +1,7 @@
+[2026-08-16 11:44:20] Login fallido | {"username":"docente","ip":"::1"}
+[2026-08-16 11:44:42] Login fallido | {"username":"docente","ip":"::1"}
+[2026-08-16 11:44:58] Login fallido | {"username":"ruben","ip":"::1"}
+[2026-08-16 17:49:38] Error enviando correo | {"to":"rubencondo8a@gmail.com","error":"SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server SMTP code: 10061 Additional SMTP info: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión"}
+[2026-08-16 17:59:46] Error enviando correo | {"to":"rubencondo8a@gmail.com","error":"SMTP Error: Could not connect to SMTP host. Failed to connect to server SMTP server error: Failed to connect to server SMTP code: 10061 Additional SMTP info: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión"}
+[2026-08-16 18:02:15] Error enviando correo | {"to":"rubencondo8a@gmail.com","error":"SMTP Error: Could not authenticate."}
+[2026-08-16 18:02:18] Error enviando correo | {"to":"rubencondo8a@gmail.com","error":"SMTP Error: Could not authenticate."}

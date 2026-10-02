@@ -1,0 +1,16 @@
+[2026-08-25 00:03:55] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:04:32] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:11:58] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:15:13] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:16:03] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:16:44] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:18:46] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 00:19:59] Error notificando cierre de debate | {"message":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'tipo' at row 1","id":21}
+[2026-08-25 09:16:11] Recordatorios de debates auto-ejecutados | {"resumen":{"debates":1,"enviados":0,"omitidos":0}}
+[2026-08-25 12:13:13] Login fallido | {"username":"61030149","ip":"181.176.81.210"}
+[2026-08-25 12:13:33] Login fallido | {"username":"61030149","ip":"181.176.81.210"}
+[2026-08-25 19:48:45] Login fallido - usuario no existe | {"username":"vijomc","ip":"74.125.212.40"}
+[2026-08-25 19:49:21] Login fallido - usuario no existe | {"username":"ddwztc","ip":"74.125.212.39"}
+[2026-08-25 19:49:37] Login fallido - usuario no existe | {"username":"rwltza","ip":"74.125.212.32"}
+[2026-08-25 19:50:49] Login fallido - usuario no existe | {"username":"effzel","ip":"74.125.212.40"}
+[2026-08-25 20:00:06] Login fallido | {"username":"70573263","ip":"179.6.23.189"}

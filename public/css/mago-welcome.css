@@ -1,0 +1,36 @@
+.mago-welcome-popup { background: transparent !important; box-shadow: none !important; border-radius: 24px !important; }
+.mago-welcome-popup .swal2-html-container { margin: 0 !important; padding: 0 !important; }
+.mago-welcome-container { overflow: visible !important; }
+.mago-welcome { position: relative; overflow: hidden; border-radius: 24px; padding: 34px 28px 26px; text-align: center; color: #fff; box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.mago-welcome.mw-iniciado { background: linear-gradient(140deg, #141d2b, #2c3e50); }
+.mago-welcome.mw-aprendiz { background: linear-gradient(140deg, #0a1f3d, #13559a); }
+.mago-welcome.mw-mago     { background: linear-gradient(140deg, #2a0f52, #7b1fa2); }
+.mago-welcome.mw-super    { background: linear-gradient(140deg, #0b3d1f, #1b5e20); }
+.mago-welcome.mw-merlin   { background: linear-gradient(140deg, #2b0a3d, #6a1b9a); }
+.mago-welcome::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 78% 12%, rgba(255,255,255,.14), transparent 52%); pointer-events: none; }
+.mw-sparkle { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #ffe066; opacity: 0; animation: mwTwinkle 3.2s ease-in-out infinite; pointer-events: none; }
+.mw-sparkle:nth-child(2) { left: 18%; top: 74%; animation-delay: .4s; width: 5px; height: 5px; background: #b388ff; }
+.mw-sparkle:nth-child(3) { left: 82%; top: 70%; animation-delay: 1s; background: #4fc3f7; }
+.mw-sparkle:nth-child(4) { left: 8%; top: 22%; animation-delay: 1.6s; width: 5px; height: 5px; background: #ff8a80; }
+.mw-sparkle:nth-child(5) { left: 90%; top: 26%; animation-delay: 2.1s; background: #69f0ae; }
+.mw-sparkle:nth-child(6) { left: 45%; top: 84%; animation-delay: 2.6s; width: 5px; height: 5px; background: #ffd740; }
+@keyframes mwTwinkle { 0%,100% { transform: translateY(0) scale(1); opacity: 0; } 35% { opacity: 1; } 60% { transform: translateY(-26px) scale(1.35); opacity: .7; } 100% { transform: translateY(-48px) scale(.6); opacity: 0; } }
+.mw-avatar { position: relative; z-index: 1; width: 120px; height: 120px; margin: 0 auto 12px; animation: mwFloat 3s ease-in-out infinite; }
+.mw-avatar::before { content: ''; position: absolute; left: 50%; bottom: 4px; width: 84px; height: 20px; border-radius: 50%; background: rgba(0,0,0,.35); filter: blur(8px); animation: mwShadow 3s ease-in-out infinite; }
+.mw-avatar img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
+@keyframes mwFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes mwShadow { 0%,100% { transform: scaleX(1); opacity: .8; } 50% { transform: scaleX(.72); opacity: .45; } }
+.mw-chip { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 6px; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffd54f; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); padding: 4px 12px; border-radius: 999px; }
+.mw-nivel { position: relative; z-index: 1; margin: 12px 0 8px; font-size: 2.1rem; font-weight: 800; line-height: 1.1; color: #fff; text-shadow: 0 3px 14px rgba(0,0,0,.35); }
+.mw-nivel i { color: #ffd54f; }
+.mw-mensaje { position: relative; z-index: 1; margin: 0 auto 14px; max-width: 400px; font-size: .95rem; line-height: 1.55; color: rgba(255,255,255,.88); }
+.mw-mensaje strong { color: #fff; }
+.mw-stats { position: relative; z-index: 1; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.mw-stat { font-size: .78rem; font-weight: 600; color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 5px 14px; }
+.mw-stat i { color: #ffd54f; }
+.mw-poderes { position: relative; z-index: 1; list-style: none; margin: 0 auto 20px; padding: 0; max-width: 360px; text-align: left; }
+.mw-poderes li { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: rgba(255,255,255,.92); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 8px 12px; margin-bottom: 8px; }
+.mw-poderes li i { width: 20px; text-align: center; color: #ffd54f; }
+.mw-btn { position: relative; z-index: 1; cursor: pointer; border: 0; border-radius: 999px; padding: 12px 34px; font-size: .95rem; font-weight: 700; color: #2b0a3d; background: #ffb300; box-shadow: 0 8px 22px rgba(0,0,0,.3); transition: transform .15s, box-shadow .15s; }
+.mw-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.4); }
+@keyframes mwShine { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }

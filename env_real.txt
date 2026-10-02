@@ -1,0 +1,31 @@
+# ============================================================
+# SIGAMETEC — Configuracion para produccion (HOSTING)
+# ============================================================
+# Copia este archivo al servidor con el nombre ".env"
+# y completa las credenciales que te de tu hosting.
+#
+# IMPORTANTE: el archivo .env del servidor debe quedar FUERA de
+# public/ (aqui esta en la raiz, junto a public/). Nunca lo subas
+# dentro de la carpeta que el navegador pueda leer directamente.
+
+# Aplicacion
+APP_NAME=Sigametec
+# Si la app queda en la raiz del subdominio (https://sigametec.tudominio.com/)
+# usa BASE_URL=/
+# Si la dejas en una subcarpeta (https://tudominio.com/sigametec/)
+# usa BASE_URL=/sigametec/
+BASE_URL=/
+# Zona horaria (Peru por defecto)
+APP_TIMEZONE=America/Lima
+
+# Base de datos (datos del hosting, NO los locales)
+DB_HOST=localhost
+DB_NAME=pauljimmyab_sigametec_db
+DB_USER=pauljimmyab_sigametec_db_usuario
+DB_PASS=@S1g3t3c_2026%#+
+
+# Seguridad del login
+MAX_LOGIN_ATTEMPTS=5
+LOGIN_LOCKOUT_TIME=900
+# Tiempo de sesion en segundos (30 min por defecto)
+SESSION_TIMEOUT=1800

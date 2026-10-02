@@ -1,0 +1,7 @@
+# No permitir listado de directorios
+Options -Indexes
+
+# No permitir ejecutar PHP dentro de archivos subidos (fotos, syllabus, rostros)
+<FilesMatch "\.(php|phar|phtml|php3|php4|php5|php7|pht|htaccess)$">
+    Require all denied
+</FilesMatch>

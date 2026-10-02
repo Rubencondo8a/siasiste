@@ -1,0 +1,93 @@
+.scanner-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+#videoFace {
+    width: 100%;
+    display: block;
+}
+#canvasDetect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#faceFrame {
+    position: absolute;
+    top: 17%;
+    left: 28%;
+    width: 44%;
+    height: 66%;
+    pointer-events: none;
+}
+#faceFrame .corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #4fc3f7;
+    opacity: .95;
+    transition: border-color .2s;
+}
+#faceFrame .corner.tl { top: -2px; left: -2px; border-right: 0; border-bottom: 0; border-top-left-radius: 8px; }
+#faceFrame .corner.tr { top: -2px; right: -2px; border-left: 0; border-bottom: 0; border-top-right-radius: 8px; }
+#faceFrame .corner.bl { bottom: -2px; left: -2px; border-right: 0; border-top: 0; border-bottom-left-radius: 8px; }
+#faceFrame .corner.br { bottom: -2px; right: -2px; border-left: 0; border-top: 0; border-bottom-right-radius: 8px; }
+#faceFrame.ok .corner { border-color: #00e676; }
+#scanLine {
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    height: 2px;
+    top: 12%;
+    background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+    animation: scanMove 2.4s ease-in-out infinite;
+    transition: background .2s;
+}
+#faceFrame.ok #scanLine { background: linear-gradient(90deg, transparent, #00e676, transparent); }
+@keyframes scanMove {
+    0%, 100% { top: 12%; }
+    50% { top: 84%; }
+}
+#frameHint {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    text-shadow: 0 1px 3px #000;
+    white-space: nowrap;
+}
+.capture-progress {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+.camera-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .72);
+    z-index: 5;
+}
+.camera-overlay.hidden {
+    display: none;
+}

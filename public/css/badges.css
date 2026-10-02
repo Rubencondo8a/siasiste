@@ -1,0 +1,28 @@
+/* ============================================================
+   BADGES (soft-tint modernos)
+   ============================================================ */
+.badge {
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: .76rem;
+    letter-spacing: .3px;
+    border: 1px solid transparent;
+}
+
+.badge-primary { background: var(--primary-bg); color: var(--primary); border-color: var(--primary-lighter); }
+.badge-accent  { background: var(--accent-bg); color: var(--accent-dark); border-color: var(--accent-light); }
+.badge-success { background: var(--success-bg); color: var(--success-dark); border-color: #BDF0DC; }
+.badge-warning { background: var(--warning-bg); color: var(--warning-dark); border-color: #EDF5B8; }
+.badge-danger  { background: var(--danger-bg); color: var(--accent-dark); border-color: var(--accent-light); }
+.badge-info    { background: var(--info-bg); color: var(--info); border-color: #C7D6FB; }
+.badge-secondary { background: var(--gray-100); color: var(--gray-600); border-color: var(--gray-200); }
+
+.badge-lg { font-size: .86rem; padding: 6px 16px; }
+
+.promedio-badge {
+    font-size: .95rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+}

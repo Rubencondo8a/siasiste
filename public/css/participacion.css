@@ -1,0 +1,154 @@
+/* =====================================================
+   Participación / Puntos — estilos del módulo
+   ===================================================== */
+
+/* --- Modal de participación --- */
+#participacionModal .modal-dialog {
+    max-width: 640px;
+}
+
+/* Formulario "Nueva Participación" */
+#participacionModal .card-outline.card-success .card-header {
+    padding: .5rem .75rem;
+}
+#participacionModal .card-outline.card-success .card-body {
+    padding: .65rem .75rem;
+}
+#participacionModal label {
+    margin-bottom: .2rem;
+}
+
+/* --- Buscador + lista de motivos --- */
+#modalMotivoBuscar {
+    border-radius: .25rem .25rem 0 0;
+    border-bottom: none;
+    background-color: #f8f9fa;
+}
+#modalMotivoBuscar:focus {
+    background-color: #fff;
+    box-shadow: none;
+    border-color: #80bdff;
+}
+
+#modalMotivo {
+    height: auto;
+    min-height: 130px;
+    max-height: 190px;
+    overflow-y: auto;
+    border-radius: 0 0 .25rem .25rem;
+    font-size: .9rem;
+}
+
+/* Opciones */
+#modalMotivo option {
+    padding: .35rem .55rem;
+}
+#modalMotivo option:hover,
+#modalMotivo option:checked {
+    background-color: #007bff;
+    color: #fff;
+}
+#modalMotivo optgroup {
+    font-weight: 700;
+    color: #555;
+    background-color: #f1f3f5;
+}
+
+/* Placeholder interno (opción sin valor) */
+#modalMotivo option[value=""] {
+    color: #999;
+    font-style: italic;
+}
+
+/* Puntos: colores según valor (ya existente en app.js, se refuerza) */
+.input-puntos.pos   { border-color: #28a745; background-color: #f0fff4; }
+.input-puntos.neg   { border-color: #dc3545; background-color: #fff5f5; }
+
+/* Historial dentro del modal */
+#listaParticipaciones table {
+    font-size: .88rem;
+}
+#listaParticipaciones .dataTables_wrapper .dataTables_filter,
+#listaParticipaciones .dataTables_wrapper .dataTables_length {
+    display: none;
+}
+
+/* Responsive: en móvil puntos y motivo se apilan */
+@media (max-width: 575.98px) {
+    #modalMotivo { min-height: 110px; }
+    #participacionModal .btn-block { font-size: .95rem; }
+}
+
+/* Espacio superior entre el modal y el borde de la ventana */
+#participacionModal .modal-dialog {
+    margin-top: 10px;
+}
+
+/* Espacio debajo del campo motivo (Select2 renderiza un span hermano) */
+#modalMotivo,
+#modalMotivo + .select2-container {
+    margin-bottom: 10px;
+}
+
+/* Opciones del dropdown Select2: texto blanco al pasar el mouse o seleccionar */
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted:hover,
+.select2-container--bootstrap4 .select2-results__option--selected {
+    background-color: #007bff;
+    color: #ffffff;
+}
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted strong,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted small,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted .text-muted,
+.select2-container--bootstrap4 .select2-results__option--selected small {
+    color: #ffffff !important;
+}
+
+/* Hover especifico sobre cada opcion */
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover strong,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover small,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover .text-muted {
+    background-color: #007bff;
+    color: #ffffff !important;
+}
+
+/* Tabla de donantes dentro del SweetAlert: colores legibles */
+.swal2-popup .table,
+.swal2-html-container .table {
+    background-color: #ffffff;
+    color: #212529;
+}
+.swal2-popup .table th,
+.swal2-popup .table td,
+.swal2-html-container .table th,
+.swal2-html-container .table td {
+    color: #212529 !important;
+    background-color: transparent;
+}
+.swal2-popup .table thead th {
+    background-color: #f1f3f5;
+    color: #212529 !important;
+}
+.swal2-popup .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.03);
+}
+
+/* Select2: resaltado uno por uno, el encabezado de categoria nunca se pinta */
+.select2-container--bootstrap4 .select2-results__group {
+    background-color: #f1f3f5 !important;
+    color: #555 !important;
+    font-weight: 700;
+    pointer-events: none;
+}
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+}
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover small,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted small,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']):hover .text-muted,
+.select2-container--bootstrap4 .select2-results__option:not([role='group']).select2-results__option--highlighted .text-muted {
+    color: #ffffff !important;
+}

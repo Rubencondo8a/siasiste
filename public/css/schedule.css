@@ -1,0 +1,33 @@
+/* ============================================================
+   HORARIO
+   ============================================================ */
+.table-bordered th.horario-header {
+    background: var(--dark);
+    color: #fff;
+    font-weight: 600;
+    font-size: .85rem;
+    text-align: center;
+}
+
+.horario-cell {
+    min-height: 60px;
+    padding: 4px !important;
+    vertical-align: top !important;
+    background: #fff;
+}
+
+.horario-block {
+    border-radius: var(--radius-xs);
+    padding: 7px 9px;
+    font-size: .8rem;
+    font-weight: 600;
+    margin: 2px 0;
+    transition: var(--transition);
+    cursor: pointer;
+    border-left: 3px solid rgba(255,255,255,.6);
+}
+
+.horario-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(10,6,32,.18);
+}

@@ -1,0 +1,144 @@
+/* ============================================================
+   TABLAS
+   ============================================================ */
+.table { margin-bottom: 0; }
+
+/* Ocultar tabla cruda hasta que DataTables la envuelva en dt-container */
+div.table-responsive > table.table:not(.nodt) { opacity: 1; }
+
+.table thead th {
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 700;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    color: var(--gray-500);
+    padding: 13px 10px;
+    background: var(--gray-50);
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 13px 10px;
+    border-top: 1px solid var(--gray-100);
+    color: var(--gray-600);
+    font-size: .9rem;
+}
+
+.table tbody tr { transition: var(--transition); }
+.table tbody tr:hover { background: var(--primary-bg) !important; }
+
+/* Botones de acción en tablas: evitan que se aprieten, envuelvan o se vean distorsionados */
+.table td { vertical-align: middle; }
+.table td .btn { white-space: nowrap; }
+.table td:last-child { white-space: nowrap; }
+.table td .btn-group .btn { margin-left: 2px; border-radius: var(--radius-xs) !important; }
+.table td .btn-group .btn:first-child { margin-left: 0; }
+
+.table-striped tbody tr:nth-of-type(odd) { background: var(--gray-50); }
+
+.table-bordered { border: 1px solid var(--gray-200); }
+.table-bordered th, .table-bordered td { border: 1px solid var(--gray-200); }
+
+.card-body.p-0 .table-responsive .table th:first-child,
+.card-body.p-0 .table-responsive .table td:first-child { padding-left: 20px; }
+.card-body.p-0 .table-responsive .table th:last-child,
+.card-body.p-0 .table-responsive .table td:last-child { padding-right: 20px; }
+
+/* ---------- DataTables ---------- */
+.card-body.p-0 .dataTables_wrapper .dataTables_filter,
+.card-body.p-0 .dataTables_wrapper .dataTables_length {
+    padding: 14px 18px 8px;
+    margin: 0;
+}
+
+.card-body.p-0 .dataTables_wrapper .dataTables_info {
+    padding: 12px 18px 8px;
+    color: var(--gray-500);
+    font-size: .83rem;
+}
+
+.card-body.p-0 .dataTables_wrapper .dataTables_paginate { padding: 10px 18px 10px; }
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: .875rem;
+    transition: var(--transition);
+    background: var(--gray-50);
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(78,55,230,.12);
+    outline: none;
+    background: #fff;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-xs);
+    padding: 5px 10px;
+    background: var(--gray-50);
+    cursor: pointer;
+}
+
+.dataTables_info { color: var(--gray-500); font-size: .83rem; }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: var(--radius-xs) !important;
+    padding: 5px 12px !important;
+    margin: 0 2px;
+    border: 1px solid var(--gray-200) !important;
+    background: #fff !important;
+    color: var(--gray-600) !important;
+    transition: var(--transition);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--primary-bg) !important;
+    color: var(--primary) !important;
+    border-color: var(--primary-light) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+/* Cabeceras de tablas de reportes con color de marca */
+.table th.bg-info.text-white,
+.table th.bg-success.text-white,
+.table th.bg-warning.text-white,
+.table th.bg-danger.text-white {
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+.table th.bg-info,
+.table th.bg-success,
+.table th.bg-warning,
+.table th.bg-danger {
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+.table td.bg-info { background: var(--primary-bg) !important; color: var(--primary) !important; font-weight: 700; }
+.table td.bg-success { background: var(--success-bg) !important; color: var(--success-dark) !important; font-weight: 700; }
+.table td.bg-warning { background: var(--warning-bg) !important; color: var(--warning-dark) !important; font-weight: 700; }
+.table td.bg-danger { background: var(--danger-bg) !important; color: var(--accent-dark) !important; font-weight: 700; }
+
+/* ============================================================
+   DataTables inside table-responsive
+   ============================================================ */
+/* Aplicar padding al contenedor fijo, no al div.row de DataTables */
+div.table-responsive { padding: 6px; }
+
+div.table-responsive > div.dt-container > div.row {
+    margin: 0;
+    padding: 8px;
+}

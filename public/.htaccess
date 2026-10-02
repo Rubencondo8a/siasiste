@@ -1,0 +1,8 @@
+Options -Indexes
+
+RewriteEngine On
+
+# URLs amigables: /auth/register -> index.php?ruta=auth/register
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?ruta=$1 [QSA,L]

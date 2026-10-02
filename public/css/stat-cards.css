@@ -1,0 +1,84 @@
+/* ============================================================
+   TARJETA DE ESTADÍSTICA — estilo dashboard SaaS
+   ============================================================ */
+.stat-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+    padding: 18px 20px 16px;
+    min-height: 150px;
+    overflow: hidden;
+    text-decoration: none !important;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-3px);
+}
+
+.stat-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--stat-color, #7C6CF5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 14px var(--wave-glow);
+}
+
+.stat-card-menu {
+    color: var(--gray-300);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 4px 6px;
+    border-radius: 8px;
+}
+
+.stat-card:hover .stat-card-menu { color: var(--gray-500); }
+
+.stat-card-value {
+    font-family: var(--font);
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-top: 14px;
+}
+
+.stat-card-label {
+    font-size: .78rem;
+    color: #6B7280;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.stat-card-wave {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 34px;
+    pointer-events: none;
+    filter: drop-shadow(0 3px 6px var(--wave-glow));
+}
+
+@media (max-width: 576px) {
+    .stat-card { min-height: 140px; padding: 16px; }
+    .stat-card-value { font-size: 1.7rem; }
+    .stat-card-wave { display: none; }
+}

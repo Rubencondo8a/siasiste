@@ -1,0 +1,44 @@
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.main-header {
+    background: var(--navbar-bg) !important;
+    border-bottom: 1px solid var(--gray-200) !important;
+    box-shadow: 0 1px 0 rgba(78,55,230,.12), 0 4px 18px rgba(10,6,32,.05);
+}
+
+.navbar-nav > .nav-item > .nav-link {
+    color: var(--gray-500) !important;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 8px;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+    color: var(--primary) !important;
+    background: var(--primary-bg);
+}
+
+.navbar .user-menu .dropdown-menu {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--card-shadow-hover);
+    padding: 8px;
+}
+
+.navbar .user-menu .dropdown-item {
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar .user-menu .dropdown-item:hover {
+    background: var(--primary-bg);
+    color: var(--primary);
+}
+
+.navbar .user-menu .user-header {
+    background: var(--primary) !important;
+    border-radius: 8px;
+}

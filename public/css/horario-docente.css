@@ -1,0 +1,73 @@
+.schedule-page .content-wrapper { display: flex; flex-direction: column; }
+.schedule-page .content { flex: 1; display: flex; flex-direction: column; }
+.schedule-page .content > .card { flex: 1; display: flex; flex-direction: column; }
+.schedule-page .card-body { flex: 1; padding: 0 !important; }
+.sched-wrap { overflow: auto; padding: 15px; }
+.sched-table { width: 100%; min-width: 700px; table-layout: fixed; border-collapse: collapse; }
+.sched-table th, .sched-table td { border: 1px solid var(--gray-200); padding: 0; vertical-align: top; }
+.sched-table th {
+    background: var(--gray-50); font-weight: 700; font-size: .8rem;
+    text-transform: uppercase; letter-spacing: .5px; color: var(--gray-500);
+    padding: 10px 6px; text-align: center; width: 16%;
+}
+.sched-table th:first-child { width: 12%; }
+.sched-time {
+    font-size: .75rem; color: var(--gray-400); text-align: center;
+    padding: 4px 2px; height: 100%; display: flex;
+    align-items: center; justify-content: center;
+}
+.sched-cell { padding: 2px; position: relative; }
+.sched-block {
+    border-radius: 4px; padding: 3px 6px; font-size: .75rem; font-weight: 500;
+    color: #fff; cursor: pointer; position: relative; margin-bottom: 1px;
+    min-height: 36px; display: flex; flex-direction: column; justify-content: center;
+    transition: opacity .15s;
+}
+.sched-block:hover { opacity: .85; }
+.sched-block .sched-del {
+    position: absolute; top: 2px; right: 3px; width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; font-size: .65rem; color: #fff;
+    background: rgba(230,55,119,.7); cursor: pointer; text-decoration: none;
+    border: none; z-index: 2;
+}
+.sched-block .sched-del:hover { background: rgba(230,55,119,1); transform: scale(1.1); }
+.sched-block { cursor: pointer; }
+.sched-block .sched-code { font-weight: 700; font-size: .8rem; }
+.sched-block .sched-time-sm { font-size: .65rem; opacity: .8; }
+.sched-block .sched-room { font-size: .65rem; opacity: .7; }
+.sched-add {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray-300); font-size: .85rem; opacity: 0; transition: opacity .15s;
+    pointer-events: none; border-radius: 4px;
+}
+.sched-cell:hover .sched-add { opacity: 1; }
+
+@media (max-width: 768px) {
+    .sched-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .sched-table { min-width: 580px; }
+    .sched-table th {
+        font-size: .65rem; padding: 6px 2px; width: auto;
+    }
+    .sched-table th:first-child { width: 48px; }
+    .sched-time { font-size: .65rem; }
+    .sched-block {
+        padding: 2px 3px; font-size: .65rem; min-height: 28px;
+    }
+    .sched-block .sched-code { font-size: .7rem; }
+    .sched-block .sched-time-sm { font-size: .55rem; }
+    .sched-block .sched-room { display: none; }
+    .sched-block .sched-del { width: 18px; height: 18px; font-size: .55rem; }
+
+    #scheduleModal .modal-footer {
+        flex-direction: column;
+    }
+    #scheduleModal .modal-footer .btn {
+        width: 100%;
+        margin: 2px 0;
+    }
+    #scheduleModal .modal-footer .btn.mr-auto {
+        margin-left: 0;
+    }
+}

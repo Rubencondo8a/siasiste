@@ -1,0 +1,61 @@
+/* ============================================================
+   ALERTAS Y CALLOUTS
+   ============================================================ */
+.alert {
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 13px 18px;
+    font-weight: 500;
+    box-shadow: var(--card-shadow);
+}
+
+.alert-success { background: var(--success-bg); color: #0A5C3E; border-left: 4px solid var(--success); }
+.alert-danger  { background: var(--danger-bg); color: #9B1C4E; border-left: 4px solid var(--danger); }
+.alert-warning { background: var(--warning-bg); color: #4A5600; border-left: 4px solid var(--warning); }
+.alert-info    { background: var(--info-bg); color: #1E40AF; border-left: 4px solid var(--info); }
+
+.callout {
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary);
+    background: var(--primary-bg);
+}
+
+.callout h5 { font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+
+.callout.callout-danger { border-left-color: var(--danger); background: var(--danger-bg); }
+.callout.callout-success { border-left-color: var(--success); background: var(--success-bg); }
+.callout.callout-warning { border-left-color: var(--warning); background: var(--warning-bg); }
+.callout.callout-info { border-left-color: var(--info); background: var(--info-bg); }
+
+/* ============================================================
+   SWEETALERT — marca
+   ============================================================ */
+.swal2-popup {
+    border-radius: var(--radius);
+    font-family: var(--font);
+}
+
+.swal2-title { font-weight: 800; color: var(--dark); letter-spacing: -.3px; }
+.swal2-html-container { color: var(--gray-500); }
+
+.swal2-styled.swal2-confirm {
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 6px 16px rgba(10,6,32,.16) !important;
+}
+
+.swal2-styled.swal2-confirm.swal2-styled--brand {
+    background: var(--primary) !important;
+}
+
+.swal2-styled.swal2-cancel {
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+}
+
+.swal2-toast .swal2-popup {
+    border-radius: var(--radius-sm);
+    box-shadow: var(--card-shadow-hover);
+}

@@ -1,0 +1,211 @@
+/* ============================================================
+   MODALES
+   ============================================================ */
+.modal-content {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: 0 25px 60px rgba(10,6,32,.28);
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--gray-200);
+    padding: 16px 22px;
+    background: #fff;
+}
+
+.modal-header.bg-primary,
+.modal-header.bg-primary.text-white {
+    background: var(--primary) !important;
+    border: none;
+}
+
+.modal-header.bg-info,
+.modal-header.bg-info.text-white {
+    background: var(--info) !important;
+    border: none;
+}
+
+.modal-header.bg-success,
+.modal-header.bg-success.text-white {
+    background: var(--success-dark) !important;
+    border: none;
+    color: #fff !important;
+}
+
+.modal-header.bg-warning,
+.modal-header.bg-warning.text-white {
+    background: var(--warning) !important;
+    border: none;
+    color: #3A4000 !important;
+}
+
+.modal-header.bg-danger,
+.modal-header.bg-danger.text-white {
+    background: var(--danger) !important;
+    border: none;
+}
+
+.modal-header .close {
+    font-size: 1.4rem;
+    color: inherit;
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.modal-body { padding: 22px; }
+.modal-footer { border-top: 1px solid var(--gray-200); padding: 16px 22px; }
+.modal-title { font-weight: 700; color: var(--dark); }
+
+.modal-backdrop.show { opacity: .5; }
+
+.modal {
+    z-index: 1060 !important;
+}
+
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ============================================================
+   CONTRASTE MODALES
+   Títulos blancos sobre encabezados de color para legibilidad
+   ============================================================ */
+.modal-header.bg-primary .modal-title,
+.modal-header.bg-secondary .modal-title,
+.modal-header.bg-success .modal-title,
+.modal-header.bg-danger .modal-title,
+.modal-header.bg-info .modal-title,
+.modal-header.bg-dark .modal-title,
+.modal-header.bg-navy .modal-title,
+.modal-header.bg-purple .modal-title,
+.modal-header.bg-teal .modal-title,
+.modal-header.bg-maroon .modal-title {
+    color: #fff;
+}
+
+.modal-header.bg-warning .modal-title {
+    color: #212529;
+}
+
+.modal-header.bg-warning .close {
+    color: #212529;
+}
+
+/* ============================================================
+   NORMALIZAR TARJETAS INTERNAS DENTRO DE MODALES
+   Evita el efecto "tarjeta sobre tarjeta" cuando un formulario
+   o detalle con .card se carga dentro de un modal.
+   ============================================================ */
+.modal-body .card {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+
+.modal-body .card-header,
+.modal-body .card-footer {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.modal-body .card-body {
+    padding: 0 !important;
+}
+
+/* ============================================================
+   ADMIN MODAL RESPONSIVE
+   Ajusta #adminModal para que no rebese en móvil
+   ============================================================ */
+#adminModal .modal-content{max-height:85vh;display:flex;flex-direction:column}
+#adminModal .modal-header{flex-shrink:0}
+#adminModal .modal-body{overflow-y:auto;flex:1 1 auto;min-height:0;-webkit-overflow-scrolling:touch}
+#adminModal .modal-footer{flex-shrink:0}
+@media(max-width:576px){
+#adminModal .modal-dialog{margin:8px auto;max-width:calc(100vw - 16px)}
+#adminModal .modal-content{max-height:92vh}
+}
+
+/* ============================================================
+   MODAL PARTICIPACION (asignar / registrar puntos)
+   ============================================================ */
+.input-puntos:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+.input-puntos.neg { color: #dc3545; font-weight: 700; }
+.input-puntos.pos { color: #28a745; font-weight: 700; }
+
+#participacionModal .modal-content {
+    display: flex;
+    flex-direction: column;
+}
+#participacionModal .modal-header { flex-shrink: 0; }
+#participacionModal .modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+/* DataTables 3.x spacing */
+#participacionModal .dt-container { margin: 0; }
+#participacionModal .dt-container > .dt-layout-row { margin-bottom: 1rem; }
+#participacionModal .dt-container > .dt-layout-row:last-child { margin-bottom: 0; }
+#participacionModal .dt-layout-full { margin-bottom: 1rem; }
+#participacionModal .dt-paging {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #dee2e6;
+}
+
+#participacionModal .dt-info { margin-top: 0.75rem; }
+#participacionModal .table { margin: 0; }
+
+#participacionModal div.dt-container div.dt-search input {
+    margin-left: .5em;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 577px) {
+    #participacionModal .modal-dialog {
+        max-width: 700px;
+        margin: 1.75rem auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #participacionModal .modal-dialog {
+        margin: 8px auto;
+        max-width: calc(100vw - 16px);
+    }
+    #participacionModal .modal-content { max-height: 92vh; }
+    #participacionModal .modal-body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #participacionModal .card { margin-bottom: 6px; }
+    #participacionModal .card-body { padding: 8px; }
+    #participacionModal .btn { padding: 5px 10px; font-size: .85rem; }
+    #participacionModal .dt-container > .dt-layout-row { margin-bottom: 0.75rem; }
+    #participacionModal .dt-paging { margin-top: 0.75rem; padding-top: 0.5rem; }
+}
+
+
+.dt-length{
+    margin-bottom: 8px !important;
+}

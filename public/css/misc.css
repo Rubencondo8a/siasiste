@@ -1,0 +1,165 @@
+/* ============================================================
+   PAGINACIÓN / PROGRESO / ELEMENTOS
+   ============================================================ */
+.pagination .page-link {
+    border: 1px solid var(--gray-200);
+    color: var(--gray-600);
+    padding: 8px 14px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.pagination .page-link:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.progress {
+    border-radius: 20px;
+    height: 8px;
+    background: var(--gray-200);
+}
+
+.progress-bar {
+    border-radius: 20px;
+    background: var(--primary);
+}
+
+dl dt {
+    font-weight: 700;
+    color: var(--gray-500);
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    margin-top: 10px;
+}
+
+dl dd {
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 5px;
+    padding: 9px 12px;
+    background: var(--gray-50);
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--gray-100);
+}
+
+/* ============================================================
+   ESTADO VACÍO / PIE / MISC
+   ============================================================ */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray-400);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: .5;
+    color: var(--primary-light);
+}
+
+.empty-state h3 { font-weight: 700; color: var(--gray-500); }
+
+.main-footer {
+    background: #fff;
+    border-top: 1px solid var(--gray-200);
+    padding: 16px 22px;
+    color: var(--gray-500);
+    font-size: .84rem;
+}
+
+.main-footer strong { color: var(--gray-600); }
+
+.overflow-hidden { overflow: hidden; }
+
+/* Formularios auth legacy (AdminLTE) */
+.login-page, .register-page {
+    background: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================================
+   TOMA DE ASISTENCIA — selector de estados
+   ============================================================ */
+.asistencia-picker {
+    display: inline-flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.as-btn {
+    border: 1px solid var(--gray-300);
+    background: #fff;
+    color: var(--gray-600);
+    font-size: .75rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 5px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 32px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.as-abbr {
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.as-btn:hover { border-color: var(--gray-400); background: var(--gray-50); }
+
+.as-btn.active {
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 3px 8px rgba(10,6,32,.18);
+}
+
+.as-btn.as-ok.active    { background: var(--success-dark); }
+.as-btn.as-warn.active  { background: var(--warning-dark); }
+.as-btn.as-no.active    { background: var(--danger); }
+.as-btn.as-just.active  { background: var(--info); }
+
+.as-btn.as-pend { border-style: dashed; background: var(--gray-100); }
+.as-btn.as-pend .as-abbr { font-size: 1.05rem; color: var(--gray-700); }
+.as-btn.as-pend.active { border-style: solid; background: var(--gray-700); }
+.as-btn.as-pend.active .as-abbr { color: #fff; }
+
+/* ============================================================
+   CROP FOTO DE PERFIL
+   ============================================================ */
+.mw-crop-inline{position:relative;display:inline-block;margin-left:16px}
+.mw-crop-inline .crop-trigger{cursor:pointer;color:#7c4dff;font-weight:600;font-size:12px;margin-left:8px}
+.mw-crop-inline .crop-trigger:hover{text-decoration:underline}
+.mw-crop-sidebar{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:380px;background:#1e1e2e;border:3px solid #7c4dff;border-radius:12px;padding:20px;z-index:9999;display:none;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.mw-crop-sidebar.show{display:block}
+.mw-crop-sidebar h5{color:#fff;margin:0 0 8px;padding:0 0 10px;border-bottom:1px solid #3a3f57;font-size:14px;font-weight:700}
+.mw-crop-sidebar small{color:#9e9e9e;font-size:11px;display:block;margin-bottom:10px}
+.mw-crop-sidebar #cropContainer{width:100%;max-height:220px;overflow:hidden;border-radius:8px;background:#111;margin-bottom:10px}
+.mw-crop-sidebar #cropContainer img{display:block;width:100%;max-height:220px;object-fit:contain}
+.mw-crop-sidebar .crop-action{width:100%;padding:10px 12px;margin:5px 0;border:none;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.mw-crop-sidebar .crop-action:hover{transform:scale(1.02)}
+.mw-crop-sidebar .crop-action-crop{background:linear-gradient(135deg,#7c4dff,#448aff);color:#fff;box-shadow:0 4px 16px rgba(124,77,255,.35)}
+.mw-crop-sidebar .crop-action-cancel{background:#2d2d3f;color:#ccc}
+.mw-crop-sidebar .crop-action-cancel:hover{background:#3d3f5f}
+.mw-crop-sidebar .crop-zoom{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0}
+.mw-crop-sidebar .crop-zoom-btn{width:32px;height:32px;border-radius:50%;border:2px solid #7c4dff;background:transparent;color:#7c4dff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.mw-crop-sidebar .crop-zoom-btn:hover{background:#7c4dff;color:#fff}
+.mw-crop-sidebar .crop-zoom-label{color:#aaa;font-size:12px;min-width:36px;text-align:center}
+.mw-crop-sidebar .crop-hint{color:#7c4dffaa;font-size:11px;margin-top:6px;text-align:center}
+.mw-crop-sidebar .crop-zoom-reset{background:transparent;border:1px solid #555;color:#aaa;padding:4px 10px;border-radius:12px;font-size:11px;cursor:pointer;margin-left:4px}
+.mw-crop-sidebar .crop-zoom-reset:hover{border-color:#7c4dff;color:#7c4dff}

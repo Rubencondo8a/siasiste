@@ -1,0 +1,111 @@
+/* ============================================================
+   ALERTA DE INASISTENCIA — responsive
+   En escritorio: tabla normal de 7 columnas.
+   En movil: cada estudiante se apila como una ficha, porque
+   7 columnas no caben sin volverla ilegible u obligar a
+   hacer scroll horizontal.
+   ============================================================ */
+
+.ai-table .ai-grupo td {
+    font-size: .8rem;
+    letter-spacing: .01em;
+}
+
+/* La columna de unidad ya aparece en la fila de grupo: en movil
+   se oculta para no repetirla 7 veces. */
+@media (max-width: 767.98px) {
+    .ai-wrap { overflow-x: visible; }
+
+    .ai-table thead { display: none; }
+
+    .ai-table,
+    .ai-table tbody,
+    .ai-table tr,
+    .ai-table td { display: block; width: 100%; }
+
+    .ai-table tr.ai-dato {
+        border-bottom: 1px solid #e9ecef;
+        padding: 10px 2px;
+    }
+    .ai-table tr.ai-dato:last-child { border-bottom: 0; }
+
+    /* Ficha del estudiante */
+    .ai-table tr.ai-dato td {
+        border: 0;
+        padding: 2px 0;
+        text-align: left !important;
+    }
+    .ai-table tr.ai-dato td.ai-unidad { display: none; }
+    .ai-table tr.ai-dato td[data-label="Estudiante"] {
+        font-size: .92rem;
+        line-height: 1.25;
+        margin-bottom: 4px;
+    }
+
+    /* Etiqueta a la izquierda, valor a la derecha */
+    .ai-table tr.ai-dato td:not([data-label="Estudiante"]):not([data-label="Inasistencia"])::before {
+        content: attr(data-label);
+        display: inline-block;
+        min-width: 74px;
+        font-size: .72rem;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        color: #6c757d;
+        font-weight: 600;
+    }
+
+    /* El porcentaje ocupa su propia linea, a tamano legible */
+    .ai-table tr.ai-dato td[data-label="Inasistencia"] {
+        margin: 6px 0 4px;
+    }
+    .ai-table tr.ai-dato td[data-label="Inasistencia"] .progress {
+        min-width: 0;
+        height: 10px !important;
+    }
+    .ai-table tr.ai-dato td[data-label="Inasistencia"] .badge {
+        font-size: .85rem;
+        padding: .3em .6em;
+    }
+
+    /* Los conteos A/T/J/Clases en una sola linea compacta */
+    .ai-table tr.ai-dato td[data-label="A"],
+    .ai-table tr.ai-dato td[data-label="T"],
+    .ai-table tr.ai-dato td[data-label="J"],
+    .ai-table tr.ai-dato td[data-label="Clases"] {
+        display: inline-block;
+        width: auto;
+        margin-right: 12px;
+    }
+
+    /* El enlace de detalle ocupa su propio ancho para que sea
+        facil de tocar sin fallar la pulsacion. */
+    .ai-table tr.ai-dato td[data-label="Detalle"] {
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+    }
+    .ai-table tr.ai-dato td[data-label="Detalle"] .btn {
+        width: 100%;
+        padding: 7px 12px;
+        font-size: .82rem;
+    }
+
+    /* Cabecera de unidad: banda compacta, sin sangria */
+    .ai-table tr.ai-grupo {
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    .ai-table tr.ai-grupo:first-child { margin-top: 0; }
+    .ai-table tr.ai-grupo td {
+        padding: 7px 10px !important;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ai-table { font-size: .85rem !important; }
+    .ai-table tr.ai-dato td[data-label="A"],
+    .ai-table tr.ai-dato td[data-label="T"],
+    .ai-table tr.ai-dato td[data-label="J"],
+    .ai-table tr.ai-dato td[data-label="Clases"] { margin-right: 8px; }
+}
