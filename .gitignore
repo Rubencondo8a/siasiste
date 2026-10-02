@@ -1,0 +1,11 @@
+
+# Archivos de configuración del servidor
+.htaccess
+htaccess_real.txt
+
+# Datos sensibles
+.env
+
+# Archivos temporales o respaldos pesados
+*.zip
+sigametec_corregido_02-10-2026.zip
